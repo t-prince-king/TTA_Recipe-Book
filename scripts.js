@@ -1,4 +1,5 @@
 // Sample recipe data stored as an array of objects
+
 const recipes = [
     {
         title: "Spaghetti Bolognese",
@@ -16,3 +17,24 @@ const recipes = [
         steps: "1. Stir-fry vegetables in olive oil. 2. Add garlic and soy sauce. 3. Serve with rice."
     }
 ];
+
+const displayRecipes = () => {
+    const recipelist = document.querySelector("#recipeList");
+    recipelist.innerHTML = "";
+
+    recipes.forEach((recipe, index) => {
+        const recipeCard = document.createElement("div");
+        recipeCard.classList.add("pp", "p-4", "rounded-lg", "mb-4", "shadow");
+        recipeCard.innerHTML = `
+
+            <h2 class="text-lg font-bold oo">${recipe.title}</h2>
+            <p class="l5"><strong>Ingredients:&emsp;</strong> ${recipe.ingredients}</p>
+            <p class="l5"><strong>Steps:&emsp;</strong> ${recipe.steps}</p>
+            <button id="deleteRecipe-${index}" class=" l5 font-bord text-lg px-3 py-1 rounded-lg hover:text-red-600">Delete Recipe</button>
+
+        `;
+        recipelist.appendChild(recipeCard);
+    })
+}
+
+displayRecipes();
