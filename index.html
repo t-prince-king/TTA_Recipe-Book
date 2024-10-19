@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Recipe book web save</title>
+</head>
+<body class="mm">
+  <header class="p-4 nn text-white text-center">
+     <h1 class="text-2xl">Recipe Book Application</h1>
+  </header>
+  <main class="p-8">
+    <section id="recipeList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ga-4">
+
+    </section>
+
+    <section class="mt-6">
+        <h2 class="text-2xl mb-4 text-white text-center">
+            add New Recipe
+        </h2>
+
+        <div>
+            <label for="" class="block text-lg  font-semibord text-white pb-2">Recipe Title</label>
+            <input type="text" id="recipeTitle" class="border border-1-lo hover:border-red-700 p-2 w-full rounded-lg focus:outline-none " placeholder="Enter your Recipe">
+
+        </div>
+
+        <div>
+            <label for="" class="block text-lg  font-semibord text-white pb-2">Ingredients</label>
+            <textarea id="Ingredients" class="border border-1-lo hover:border-red-700 p-2 w-full rounded-lg focus:outline-none " placeholder="Enter your Recipe Ingredients"></textarea> ></textarea>
+        </div>
+  
+        <div>
+            <label for="" class="block text-lg  font-semibord text-white pb-2">Recipe steps</label>
+            <textarea id="recipeSpeps" class="border border-1-lo hover:border-red-700 p-2 w-full rounded-lg focus:outline-none " placeholder="Enter your Recipe steps"></textarea> ></textarea>
+           
+        </div>
+        <button id="addRecipe" class="bg-green-500 l5 font-bord text-lg px-3 py-1 rounded-lg hover:text-red-600">
+            Add Recepe too your Book
+        </button>
+    </section>
+
+
+  </main>
+  <footer class="p-4 nn text-white text-center">
+    <p>
+        &copy; TTA Recipe Book 2024 👩‍🍳👨‍🍳🗿
+    </p>
+  </footer>
+</body>
+</html>
