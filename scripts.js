@@ -16,6 +16,7 @@ const recipes = [
         ingredients: "Broccoli, Carrots, Bell Peppers, Soy Sauce, Garlic, Olive Oil",
         steps: "1. Stir-fry vegetables in olive oil. 2. Add garlic and soy sauce. 3. Serve with rice."
     }
+   
 ];
 
 const displayRecipes = () => {
@@ -30,11 +31,39 @@ const displayRecipes = () => {
             <h2 class="text-lg font-bold oo">${recipe.title}</h2>
             <p class="l5"><strong>Ingredients:&emsp;</strong> ${recipe.ingredients}</p>
             <p class="l5"><strong>Steps:&emsp;</strong> ${recipe.steps}</p>
-            <button id="deleteRecipe-${index}" class=" l5 font-bord text-lg px-3 py-1 rounded-lg hover:text-red-600">Delete Recipe</button>
 
         `;
         recipelist.appendChild(recipeCard);
     })
 }
 
+const addRecipe = () => {
+    const recipeTitleInput = document.querySelector("#recipeTitle");
+    const IngredientsInput = document.querySelector("#Ingredients");
+    const recipeSpepsInput = document.querySelector("#recipeSpeps");
+    
+    
+    const recipeTitle = recipeSpepsInput.value.trim();
+    const Ingredients = IngredientsInput.value.trim();
+    const recipeSpeps = recipeSpepsInput.value.trim();
+    
+    if (recipeTitle !== "" && recipeSpeps !== "" && Ingredients !== "") {
+       
+        const newRecipe = {
+            title: recipeTitle,
+            ingredients: Ingredients,
+            steps: recipeSpeps
+        };
+        recipes.push(newRecipe);
+        recipeTitleInput.value = "";
+        IngredientsInput.value = "";
+        recipeSpepsInput.value = "";
+    displayRecipes();
+}
+else {
+    alert("Please fill in all fields ✨⏲");
+}
+}
+const addRecipeBtn = document.querySelector("#addRecipe");
+addRecipeBtn.addEventListener("click", addRecipe);
 displayRecipes();
