@@ -1,54 +1,52 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Recipe Book Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title> Recipe Book Application</title>
 </head>
-
-<body class="bg-gray-200">
-    <header class="p-4 bg-blue-600 text-white text-center">
-        <h1 class="text-3xl font-bold">Recipe Book</h1>
+<body class="bg-gray-100">
+    <header class="p-5 bg-blue-500 text-white text-center ">
+        <h1 class="text-xl">Recipe Book Application</h1>
     </header>
     
-    <main class="p-6">
-        <!-- Section to display Recipes -->
-        <section id="recipelist" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            
+    <main class="p-8">
+        <section class="my-4">
+            <a href="./recipes.html" class="px-4 py-2 bg-blue-500 my-4 rounded-md text-white">View current Recipes</a>
         </section>
-
         <section class="mt-6">
-            <h2 class="text-2xl mb-4">Add a new book</h2>
-            <!-- Form to Add Recipe -->
-               <form id="recipeForm" class="space-y-4">
-                <div class="pb-2">
-                    <label  class="blook text-lg font-semibold mb-2">recipe Title</label>
-                    <input type="text" id="recipeTitle" class="border p-2 w-full rounded-lg focus:outline-none" 
-                    placeholder="Enter recipe title">
+            <h2 class="text-xl mb-4">Add a New Recipe</h2>
+            <form id="recipeForm" class="space-y-4">
+                <div>
+                    <label class="block text-lg font-semibold pb-2">Recipe Title</label>
+                    <input type="text" id="recipeTitle" class="border p-2 w-full rounded-lg focus:outline-none" placeholder="Enter Recipe Title">
+                   <span id="titleError" class="text-red-500 font-semibold hidden">Recipe Title is Required</span>
                 </div>
     
-                <div class="pb-2">
-                    <label  class="blook text-lg font-semibold pb-[2px]">Ingredients</label>
-                    <textarea id="recipeIngredients" class="border p-2 w-full rounded-lg focus:outline-none" 
-                    placeholder="Enter recipe Ingredients"></textarea>
+                <div>
+                    <label class="block text-lg font-semibold pb-2">Ingredients</label>
+                    <textarea name id="recipeIngredients"  class="border p-2 w-full rounded-lg focus:outline-none" placeholder="Enter Recipe Ingredients"></textarea>
+                    <span id="ingredientsError" class="text-red-500 font-semibold hidden">Recipe Ingredients are Required</span>
                 </div>
+                
+                <div>
+                    <label class="block text-lg font-semibold pb-2">Steps</label>
+                    <textarea name id="recipeSteps"  class="border p-2 w-full rounded-lg focus:outline-none" placeholder="Enter recipe Steps"></textarea>
+                    <span id="stepsError" class="text-red-500 font-semibold hidden">Recipe Steps are Required</span
+                
+                    </div>
     
-                <div class="pb-2">
-                    <label  class="blook text-lg font-semibold pb-[2px]">Steps</label>
-                    <textarea id="recipeStep" class="border p-2 w-full rounded-lg focus:outline-none" 
-                    placeholder="Enter recipe Steps"></textarea>
-                </div>
-    
-                <button type="submit" id="Addrecipe" class="bg-green-500 text-white font-thin px-3 py-2 mt-2 rounded-lg">Add recipe</button>
-               </form>
-           
+                <button type="submit" class="bg-green-500 text-white font-thin text-lg px-3 py-1 mt-4 rounded-lg">Add Recipe</button>
+            </form>
         </section>
     </main>
 
     <footer class="p-4 bg-gray-700 text-white text-center">
-       <p> &copy;2024 Recipe Book Application</p>
+        <p>&copy;2024 TTA Recipe Book App</p>
     </footer>
 
     <script src="./scirpts.js"></script>
+    
 </body>
-</html>
+</html> 
